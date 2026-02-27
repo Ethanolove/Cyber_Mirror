@@ -19,11 +19,18 @@ Le projet est entièrement conteneurisé. Une seule commande permet de lancer le
    ```
 3. Accédez à l'application : http://localhost:3000 (Frontend) et http://localhost:8000 (Backend API).
 
+### Arrêt
+Pour éteindre proprement le projet et libérer les ressources :
+```bash
+docker-compose down
+```
+
 ### Chargement du modèle IA (Ollama)
 Le projet est configuré pour télécharger automatiquement le modèle **Llama 3.2:1b** (1.3 Go) au premier démarrage via un service dédié. Une barre d'état en bas de l'application indique si l'IA est prête.
 
 **Pour charger ou vérifier le modèle manuellement via le terminal :**
 ```bash
+# Note : Le nom du conteneur peut varier selon le dossier parent (utilisez 'docker ps' pour vérifier)
 docker exec -it projet-ollama-1 ollama pull llama3.2:1b
 ```
 
