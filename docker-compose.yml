@@ -1,0 +1,51 @@
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    environment:
+      - OLLAMA_URL=http://ollama:11434/api/generate
+    depends_on:
+      ollama:
+        condition: service_healthy
+
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  ollama-pull-model:
+    image: ollama/ollama:latest
+    environment:
+      - OLLAMA_HOST=ollama
+    volumes:
+      - ollama_data:/root/.ollama
+    entrypoint: /bin/sh -c "until ollama list; do sleep 2; done && ollama pull llama3.2:1b"
+    depends_on:
+      ollama:
+        condition: service_healthy
+
+volumes:
+  ollama_data:

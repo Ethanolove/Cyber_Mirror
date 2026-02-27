@@ -1,0 +1,110 @@
+[
+  {
+    "id": "pwd",
+    "category": "Mots de passe",
+    "weight": 0.4,
+    "questions": [
+      {
+        "id": "q1",
+        "text": "Quel type de mot de passe utilisez-vous généralement ?",
+        "options": [
+          { "text": "Mot de passe unique et complexe", "points": 0 },
+          { "text": "Variations du même mot de passe", "points": 5 },
+          { "text": "Mot de passe simple (ex: 123456)", "points": 10 },
+          { "text": "Je ne sais pas", "points": 8 }
+        ]
+      },
+      {
+        "id": "q2",
+        "text": "Comment gérez-vous vos mots de passe ?",
+        "options": [
+          { "text": "Gestionnaire de mots de passe", "points": 0 },
+          { "text": "Mémorisation personnelle", "points": 4 },
+          { "text": "Enregistrés dans le navigateur", "points": 6 },
+          { "text": "Notes papier ou fichier texte", "points": 10 }
+        ]
+      },
+      {
+        "id": "q3",
+        "text": "Utilisez-vous l'authentification à deux facteurs (2FA) ?",
+        "options": [
+          { "text": "Toujours", "points": 0 },
+          { "text": "Parfois", "points": 4 },
+          { "text": "Rarement", "points": 7 },
+          { "text": "Jamais", "points": 10 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "web",
+    "category": "Navigation web",
+    "weight": 0.3,
+    "questions": [
+      {
+        "id": "q4",
+        "text": "Vérifiez-vous le cadenas HTTPS avant de payer ?",
+        "options": [
+          { "text": "Toujours", "points": 0 },
+          { "text": "Souvent", "points": 3 },
+          { "text": "Rarement", "points": 7 },
+          { "text": "Jamais", "points": 10 }
+        ]
+      },
+      {
+        "id": "q6",
+        "text": "Comment gérez-vous les cookies ?",
+        "options": [
+          { "text": "Je personnalise (refus tout sauf nécessaire)", "points": 0 },
+          { "text": "J'accepte les nécessaires uniquement", "points": 2 },
+          { "text": "J'accepte tout (c'est plus rapide)", "points": 7 },
+          { "text": "Je ne sais pas", "points": 8 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "email",
+    "category": "Emails / Phishing",
+    "weight": 0.2,
+    "questions": [
+      {
+        "id": "q7",
+        "text": "Vous recevez un email urgent de votre banque. Que faites-vous ?",
+        "options": [
+          { "text": "Je vérifie l'adresse et j'appelle la banque", "points": 0 },
+          { "text": "Je l'ignore", "points": 3 },
+          { "text": "Je clique sur le lien pour voir", "points": 8 },
+          { "text": "Je réponds avec les infos demandées", "points": 10 }
+        ]
+      },
+      {
+        "id": "q9",
+        "text": "Savez-vous reconnaître une tentative de phishing ?",
+        "options": [
+          { "text": "Oui, facilement", "points": 0 },
+          { "text": "Oui, mais pas toujours", "points": 4 },
+          { "text": "Je suis incertain", "points": 6 },
+          { "text": "Non", "points": 8 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "social",
+    "category": "Réseaux sociaux",
+    "weight": 0.1,
+    "questions": [
+      {
+        "id": "q10",
+        "text": "Partagez-vous des informations personnelles (vacances, localisation) ?",
+        "options": [
+          { "text": "Rarement ou jamais", "points": 0 },
+          { "text": "Parfois (amis uniquement)", "points": 3 },
+          { "text": "Souvent", "points": 7 },
+          { "text": "Je ne fais pas attention / Public", "points": 10 }
+        ]
+      }
+    ]
+  }
+]
